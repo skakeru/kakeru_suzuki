@@ -1,0 +1,1050 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font: 100%/1.5 'PT Sans Narrow', 'Hiragino Sans';
+  letter-spacing: 1px;
+}
+
+ul, li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 40px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+input {
+  background-color: transparent;
+  outline-width: 0;
+}
+
+form input[type="submit"] {
+  border: none;
+  cursor: pointer;
+}
+
+/* 共通レイアウト ================================ */
+body, html, main {
+    height: 100%;
+}
+
+
+
+body {
+  color: black;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+main{
+  position: absolute;
+  top: 4vw;
+  width: 100%;
+}
+
+
+
+
+.container {
+  max-width: 100%;
+}
+
+
+
+/* !!!!index!!!!! ================================ */
+/* ヘッダー ================================ */
+header {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  position:fixed;
+  top:0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background: white;
+}
+
+.header-item{
+  font-size: 4vw;
+  line-height: 1;
+  font-weight: bold;
+  margin-left: 7vw;
+  margin-right: 7vw;
+  position: relative;
+  display:block;
+  background: white;
+}
+
+.header-item-top{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background: white;
+}
+
+.header-item-top-hide{
+  display: none;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  background: black;
+  color: white;
+  margin-left: 0vw;
+  margin-right: 0vw;
+}
+
+.headers-item-top-hide{
+  text-align: left;
+  width: 100%;
+  padding-left: 8%;
+}
+
+
+/* main全体 ================================ */
+
+.fixed {
+  min-height: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+
+.wrapper{
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.wrapper-left{
+  width: 50%;
+  height: auto;
+  float: left;
+  position:relative;
+}
+
+.wrapper-right{
+  width: 50%;
+  height: auto;
+  float: right;
+  position:relative;
+  text-align: center;
+}
+
+
+
+
+
+
+.buttons{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+
+.buttons a{
+  color: white;
+  text-align: center;
+  line-height: 2;
+  width:180px;
+  height: 80px;
+  border-radius: 10px;
+}
+
+
+
+
+
+
+/* fix1枚目 ================================ */
+.fixed.fixed-1{
+    background-image: url("https://i.imgur.com/Q2cu4Pm.jpg");
+}
+
+
+.title h1{
+  font-size: 16vw;
+  color: white;
+  line-height: 1;
+  mix-blend-mode: overlay;
+  text-align: center;
+}
+
+
+/* スクロールボタン ================================ */
+.fixed a {
+  position: absolute;
+  bottom: 20px;
+  left: 47%;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  text-decoration: none;
+  padding-top: 60px;
+  color: white;
+  font-size: 30px;
+}
+
+.fixed a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 46px;
+  height: 46px;
+  margin-left: -23px;
+  border: 3px solid #fff;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+.fixed a span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  width: 16px;
+  height: 16px;
+  margin: -12px 0 0 -8px;
+  border-left: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+.fixed a span::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  content: '';
+  width: 44px;
+  height: 44px;
+  box-shadow: 0 0 0 0 rgba(255,255,255,.1);
+  border-radius: 100%;
+  opacity: 0;
+  -webkit-animation: sdb 3s infinite;
+  animation: sdb 3s infinite;
+  box-sizing: border-box;
+}
+
+
+
+
+@-webkit-keyframes sdb {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes sdb {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+/* scroll1枚目 ================================ */
+.scroll.scroll-1{
+    position:relative;
+}
+
+.name{
+  background: white;
+  width: 100%;
+  top: 0px;
+}
+
+.name h1{
+  color: black;
+  font-size: 4vw;
+  text-align: right;
+}
+
+.wrapper-left img{
+  width:70%;
+  height: auto;
+  position: absolute;
+  top: 50px;
+  right: 15%;
+}
+
+
+
+.wrapper-right h2{
+  font-weight: normal;
+  font-family: 'Hiragino Sans';
+  margin-top: 20px;
+  text-align: center;
+}
+
+.wrapper-right h1{
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+}
+
+
+.button-photo{
+  background-color: #212E58;
+}
+.button-portfolio{
+  background-color: #7C0001;
+}
+.button-blog{
+  background-color: #39B697;
+}
+
+
+.sns a{
+  display: block;
+  font-family: 'Hiragino Sans';
+
+  text-align: center;
+}
+
+.username{
+  font-size: 25px;
+}
+
+.fa-instagram{
+  margin-right: 10px;
+}
+.fa-facebook-f{
+  margin-right: 18px;
+}
+.fa-twitter{
+  margin-right: 7px;
+}
+
+
+
+
+/* fix2枚目 ================================ */
+.fixed.fixed-2{
+    background-image: url("https://i.imgur.com/s8rbOe9.jpg");
+    position:relative;
+}
+
+
+.subtitle{
+  background: white;
+  position: absolute;
+  top: 100px;
+  right: 0px;
+  float: right;
+}
+
+.subtitle h1{
+  font-size: 8vw;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 0.8;
+  text-align: right;
+}
+
+/* scroll2枚目 ================================ */
+.scroll.scroll-2{
+    position:relative;
+}
+
+.scroll-2 h1{
+  font-size: 3vw;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.arrow{
+  height: 3vw;
+  padding-top: 15px;
+}
+
+.fa-arrow-up{
+  font-size: 3vw;
+  padding-left: 49%;
+}
+
+.scroll-2 h2{
+  font-size: 3vw;
+  text-align: center;
+}
+
+
+/* fix3枚目 ================================ */
+.fixed.fixed-3{
+    background-image: url("https://i.imgur.com/EupaTNW.jpg");
+    position:relative;
+}
+
+
+.subtitle{
+  background: white;
+  position: absolute;
+  top: 100px;
+  right: 0px;
+  float: right;
+}
+
+.subtitle h1{
+  font-size: 8vw;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 0.8;
+  text-align: right;
+}
+
+/* scroll3枚目 ================================ */
+.scroll.scroll-3{
+    position:relative;
+}
+
+.keywords-photo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 100vh; /*列が増えたらここを直す*/
+}
+
+.keywords-portfolio{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+.keyword{
+  width: 26%;
+  margin-top: 50px;
+  height: auto;
+  float: left;
+  position:relative;
+  text-align: center;
+}
+
+.keyword img{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.keyword h4{
+  font-weight: normal;
+  width: 100%;
+  margin-bottom: 40px;
+  text-align: left;
+  position:relative;
+}
+
+.keyword a{
+  color: white;
+  line-height: 2;
+  border-radius: 10px;
+  font-size: 100%;
+  font-weight: bold;
+  background-color: #212E58;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+
+
+
+.keyword-portfolio-1 a{
+  background-color: #7C0001;
+}
+
+.keyword-portfolio-2 a{
+  background-color: #7C0001;
+}
+
+.hover-contents{
+  display: none;
+  letter-spacing: 0px;
+  font-family: 'Hiragino Sans';
+}
+
+.hover-active{
+  display: block;
+}
+
+/* フッター ================================ */
+.footer {
+  text-align: center;
+  padding: 40px 0;
+  color: black;
+  background-color: white;
+}
+
+.footer h3{
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.copyright{
+  margin-top: 10px;
+}
+
+
+.social-icon{
+  font-size: 36px;
+  margin-bottom: 20px;
+
+}
+
+#facebook-icon{
+  margin-left: 10px;
+}
+
+
+/* !!!!!photo!!!!!! ================================ */
+
+/* header ================================ */
+.header-photo{
+  background: #273464;
+}
+
+.header-item-photo{
+  background: #273464;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+
+
+.header-item-photo-hide{
+  display: none;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  background: white;
+  color: #273464;
+  margin-left: 0vw;
+  margin-right: 0vw;
+}
+
+.headers-item-photo-hide{
+  text-align: left;
+  width: 100%;
+  padding-left: 30%;
+}
+
+.headers-item-photo-hide a{
+  font-size: 2vw;
+  padding-top: 1%;
+}
+
+/* fix1枚目 ================================ */
+.fixed-1-photo{
+  background-image: url("https://i.imgur.com/MOOedEV.png");
+
+}
+
+.title-photo h1{
+  mix-blend-mode: luminosity;
+  opacity: 0.7;
+}
+
+.fixed-2-photo{
+  background-image: url("https://i.imgur.com/6yIVjyV.jpg");
+  position:relative;
+}
+
+/* スクロールボタン ================================ */
+.fixed.fixed-1-photo a {
+  position: absolute;
+  bottom: 20px;
+  left: 47%;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  text-decoration: none;
+  padding-top: 60px;
+  color: white;
+  font-size: 30px;
+}
+
+.fixed.fixed-1-photo a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 46px;
+  height: 46px;
+  margin-left: -23px;
+  border: 3px solid #fff;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+.fixed.fixed-1-photo a span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  width: 16px;
+  height: 16px;
+  margin: -12px 0 0 -8px;
+  border-left: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+.fixed.fixed-1-photo a span::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  content: '';
+  width: 44px;
+  height: 44px;
+  box-shadow: 0 0 0 0 rgba(255,255,255,.1);
+  border-radius: 100%;
+  opacity: 0;
+  -webkit-animation: sdb 3s infinite;
+  animation: sdb 3s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes sdb {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes sdb {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* fix2枚目 ================================ */
+.fixed-2-photo{
+  background-image: url("https://i.imgur.com/3gpV3AT.jpg");
+  position:relative;
+}
+
+.subtitle.subtitle-photo{
+  background: #273464;
+}
+
+.subtitle.subtitle-photo h1{
+  line-height: 1.2;
+  color: white;
+  font-size: 5vw;
+  padding-top: 10px;
+}
+
+/* fix3枚目 ================================ */
+.fixed-3-photo{
+  background-image: url("https://i.imgur.com/3Syuqnv.jpg");
+  position:relative;
+}
+
+/* fix4枚目 ================================ */
+.fixed-4-photo{
+  background-image: url("https://i.imgur.com/6yIVjyV.jpg");
+  position:relative;
+}
+
+
+
+/* scroll2枚目 ================================ */
+.scroll-2-photo {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em;
+  margin: auto;
+  width: 90%;
+}
+
+.grid{
+  display: grid;
+  gap:20px;
+  grid-template-columns: repeat(4,minmax(120px,1fr));
+}
+
+.grid img{
+  width: 100%;
+}
+
+.big-box{
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+
+.big-box-2{
+  grid-column: 2/4;
+  grid-row: 3/5;
+}
+
+.big-box-3{
+  grid-column: 3/5;
+  grid-row: 5/7;
+}
+
+.big-box-4{
+  grid-column: 1/3;
+  grid-row: 7/9;
+}
+
+.big-box-5{
+  grid-column: 2/4;
+  grid-row: 9/11;
+}
+
+.big-box-6{
+  grid-column: 3/5;
+  grid-row: 11/13;
+}
+
+.big-box-7{
+  grid-column: 1/3;
+  grid-row: 13/15;
+}
+
+.big-box-8{
+  grid-column: 2/4;
+  grid-row: 15/17;
+}
+.big-box-9{
+  grid-column: 3/5;
+  grid-row: 17/19;
+}
+
+.slick-slide img{
+  width: 100%;
+}
+
+.scroll-3-photo {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  padding: 2em;
+  margin: auto;
+}
+
+.scroll-4-photo {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  padding: 2em;
+  margin: auto;
+}
+
+
+
+/* !!!!!portfolio!!!!!! ================================ */
+
+/* header ================================ */
+.header-portfolio{
+  background: #7C0001;
+}
+
+.header-item-portfolio{
+  background: #7C0001;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.header-item-portfolio-hide{
+  display: none;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  background: white;
+  color: #7C0001;
+  margin-left: 0vw;
+  margin-right: 0vw;
+}
+
+.headers-item-portfolio-hide{
+  text-align: left;
+  width: 100%;
+  padding-left: 56%;
+}
+
+.headers-item-portfolio-hide a{
+  font-size: 3vw;
+  padding-top: 2%;
+}
+
+/* fix1枚目 ================================ */
+.fixed-1-portfolio{
+  background-image: url("https://i.imgur.com/w5JawBO.jpg");
+
+}
+
+.title-portfolio h1{
+  mix-blend-mode: luminosity;
+  opacity: 0.7;
+  color: white;
+}
+
+/* fix2枚目 ================================ */
+.fixed-2-portfolio{
+  background-image: url("https://i.imgur.com/6yIVjyV.jpg");
+  position:relative;
+}
+
+
+/* scroll2枚目 ================================ */
+.scroll-2-portfolio{
+  position: relative;
+  height: auto;
+  min-height: none;
+}
+
+.subtitle-left{
+  background: #7C0001;
+  position: absolute;
+  top: 100px;
+  left: 0px;
+  float: left;
+}
+
+.subtitle-left h1{
+  font-size: 8vw;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 0.9;
+  text-align: left;
+  color: white;
+}
+
+.wrapper-portfolio{
+  position: absolute;
+  top:300px;
+}
+
+.container-for-works{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.item img{
+  width: 58%;
+  position: relative;
+  top: auto;
+  right: auto;
+}
+
+.item-pc img{
+  width: 70%;
+  position: relative;
+  top: auto;
+  right: auto;
+  text-align: center;
+  margin-top: 40px;
+}
+
+
+.work-title{
+  background: #7C0001;
+  display: inline-block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.work-title h1{
+  font-family: 'Hiragino Sans';
+  font-size: 3vw;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 0px;
+}
+
+.work-descriptions{
+  padding-right: 50px;
+  padding-left: 50px;
+  margin-bottom: 50px;
+  font-size: 1vw;
+}
+
+.button-to-work{
+  color: white;
+  line-height: 2;
+  border-radius: 10px;
+  font-family: 'Hiragino Sans';
+  font-size: 2vw;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+  border: solid;
+  border-color: #7C0001;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top: 100px;
+}
+
+/* scroll3枚目 ================================ */
+.scroll-3-portfolio{
+  position: relative;
+  height: auto;
+  margin-bottom: 200px;
+}
+
+
+/* scroll4枚目 ================================ */
+.scroll-4-portfolio{
+  position: relative;
+  height: 100%;
+
+}
+
+.keywords-portfolio-for-design{
+  padding-top: 300px;
+}
+
+
+/* scroll5枚目 ================================ */
+.scroll-5-portfolio{
+  position: relative;
+  height: 100%;
+}
+
+/* scroll6枚目 ================================ */
+.scroll-6-portfolio{
+  position: relative;
+  height: 100%;
+}
+
+/* scroll7枚目 ================================ */
+.scroll-7-portfolio{
+  position: relative;
+  height: 100%;
+}
+
+.item-sp-lp{
+  width: 20%;
+}
+.item-sp-lp img{
+  width: 90%;
+}
+
+
+/* scroll8枚目 ================================ */
+.scroll-8-portfolio{
+  position: relative;
+  height: 100%;
+}
+
+.item-pc-lp{
+  width: 30%;
+}
+
+.item-pc-lp img{
+  width: 90%;
+}
+
+.item-pc-lp-top{
+  width: 90%;
+}
+
+.item-pc-lp-top img{
+  width: 90%;
+}
+
+/* scroll9枚目 ================================ */
+.scroll-9-portfolio{
+  position: relative;
+  height: 100%;
+  margin-bottom: 400px;
+}
+
+/* scroll10枚目 ================================ */
+.scroll-10-portfolio{
+  position: relative;
+  height: auto;
+  min-height: 50%;
+}
+
+.item-logo{
+  width: 50%;
+  margin-top: 5%;
+}
+
+.item-logo img{
+  width: 90%;
+}
+
+/* scroll11枚目 ================================ */
+.scroll-11-portfolio{
+  position: relative;
+  height: auto;
+}
+
+/* scroll2枚目 ================================ */
+.scroll-12-portfolio{
+  position: relative;
+  height: auto;
+}

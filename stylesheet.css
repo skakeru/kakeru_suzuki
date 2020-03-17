@@ -178,7 +178,7 @@ header {
 
 /* fix1枚目 ================================ */
 .fixed.fixed-1{
-    background-image: url("/Q2cu4Pm.jpg");
+    background-image: url("hero/Q2cu4Pm.jpg");
 }
 
 
@@ -359,7 +359,7 @@ header {
 
 /* fix2枚目 ================================ */
 .fixed.fixed-2{
-    background-image: url("/hero/s8rbOe9.jpg");
+    background-image: url("hero/s8rbOe9.jpg");
     position:relative;
 }
 
@@ -411,7 +411,7 @@ header {
 
 /* fix3枚目 ================================ */
 .fixed.fixed-3{
-    background-image: url("/hero/EupaTNW.jpg");
+    background-image: url("hero/EupaTNW.jpg");
     position:relative;
 }
 
@@ -578,7 +578,7 @@ header {
 
 /* fix1枚目 ================================ */
 .fixed-1-photo{
-  background-image: url("/memories-black.jpg");
+  background-image: url("memories-black.jpg");
 
 }
 
@@ -587,10 +587,7 @@ header {
   opacity: 0.7;
 }
 
-.fixed-2-photo{
-  background-image: url("https://i.imgur.com/6yIVjyV.jpg");
-  position:relative;
-}
+
 
 /* スクロールボタン ================================ */
 .fixed.fixed-1-photo a {
@@ -679,7 +676,7 @@ header {
 
 /* fix2枚目 ================================ */
 .fixed-2-photo{
-  background-image: url("/hero/3gpV3AT.jpg");
+  background-image: url("hero/3gpV3AT.jpg");
   position:relative;
 }
 
@@ -696,13 +693,13 @@ header {
 
 /* fix3枚目 ================================ */
 .fixed-3-photo{
-  background-image: url("/hero/3Syuqnv.jpg");
+  background-image: url("hero/3Syuqnv.jpg");
   position:relative;
 }
 
 /* fix4枚目 ================================ */
 .fixed-4-photo{
-  background-image: url("/hero/6yIVjyV.jpg");
+  background-image: url("hero/6yIVjyV.jpg");
   position:relative;
 }
 
@@ -831,7 +828,7 @@ header {
 
 /* fix1枚目 ================================ */
 .fixed-1-portfolio{
-  background-image: url("/hero/w5JawBO.jpg");
+  background-image: url("hero/w5JawBO.jpg");
 
 }
 
@@ -843,7 +840,7 @@ header {
 
 /* fix2枚目 ================================ */
 .fixed-2-portfolio{
-  background-image: url("/hero/6yIVjyV.jpg");
+  background-image: url("hero/6yIVjyV.jpg");
   position:relative;
 }
 

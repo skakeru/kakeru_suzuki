@@ -515,6 +515,25 @@ header {
   margin-top: 20px;
 }
 
+@media(max-width: 1000px){
+  .scroll-2 h1{
+      font-size: 6vw;
+  }
+}
+
+@media(max-width: 1000px){
+  .for-pc{
+    display: none;
+  }
+}
+
+@media(max-width: 1000px){
+  .for-sp{
+    display: block;
+  }
+}
+
+
 .arrow{
   height: 3vw;
   padding-top: 15px;
@@ -528,6 +547,13 @@ header {
 .scroll-2 h2{
   font-size: 3vw;
   text-align: center;
+}
+
+@media(max-width: 1000px){
+  .scroll-2 h2{
+    font-size: 5vw;
+    text-align: center;
+  }
 }
 
 

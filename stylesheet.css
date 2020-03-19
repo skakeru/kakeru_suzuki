@@ -3,7 +3,7 @@
 }
 
 html {
-  font: 100%/1.5 'PT Sans Narrow', 'Hiragino Sans';
+  fontfamily: 100%/1.5 'PT Sans Narrow',sans-serif;, 'Hiragino Sans';
   letter-spacing: 1px;
 }
 

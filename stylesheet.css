@@ -927,6 +927,10 @@ header {
   font-size: 1vw;
 }
 
+.work-descriptions h2{
+  text-align: left;
+}
+
 .button-to-work{
   color: white;
   line-height: 2;

@@ -1050,6 +1050,10 @@ header {
   margin-top: 5%;
 }
 
+.item-logo-big{
+  width: 70%;
+}
+
 .item-logo img{
   width: 90%;
 }

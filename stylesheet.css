@@ -960,14 +960,14 @@ header {
   padding-bottom: 5%;
   padding-left: 5%;
   padding-right: 5%;
-  margin-top: 100px;
+
 }
 
 /* scroll3枚目 ================================ */
 .scroll-3-portfolio{
   position: relative;
   height: 100%;
-  margin-bottom: 200px;
+  margin-bottom: 20%;
 }
 
 
@@ -979,7 +979,7 @@ header {
 }
 
 .keywords-portfolio-for-design{
-  padding-top: 300px;
+  padding-top: 25%;
 }
 
 
@@ -1035,7 +1035,7 @@ header {
 .scroll-9-portfolio{
   position: relative;
   height: 100%;
-  margin-bottom: 400px;
+  margin-bottom: 30%;
 }
 
 /* scroll10枚目 ================================ */

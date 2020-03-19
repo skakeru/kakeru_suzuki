@@ -532,6 +532,22 @@ header {
     display: block;
   }
 }
+.height-1200{
+    display: none;
+}
+
+@media(max-width: 1000px){
+  .height-700{
+    display: none;
+  }
+}
+
+
+@media(max-width: 1000px){
+  .height-1200{
+    display: block;
+  }
+}
 
 
 .arrow{

@@ -658,6 +658,12 @@ header {
   position:relative;
 }
 
+@media(max-width: 1000px){
+  .keyword h4{
+    display: none;
+  }
+}
+
 .keyword a{
   color: white;
   line-height: 2;

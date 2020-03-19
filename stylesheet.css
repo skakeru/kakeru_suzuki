@@ -3,7 +3,7 @@
 }
 
 html {
-  font-family: 'PT Sans Narrow','Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic', sans-serif;  
+  font-family: 'PT Sans Narrow','Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,, sans-serif;  
   letter-spacing: 1px;
 }
 
@@ -334,7 +334,6 @@ header {
 
 .sns a{
   display: block;
-  font-family: 'Hiragino Sans';
 
   text-align: center;
 }
@@ -501,7 +500,6 @@ header {
 .hover-contents{
   display: none;
   letter-spacing: 0px;
-  font-family: 'Hiragino Sans';
 }
 
 .hover-active{

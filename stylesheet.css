@@ -246,6 +246,13 @@ header {
   font-size: 30px;
 }
 
+@media(max-width: 1000px){
+  .fixed a{
+    padding-top: 120px;
+    font-size: 60px;
+  }
+}
+
 .fixed a span {
   position: absolute;
   top: 0;
@@ -257,6 +264,16 @@ header {
   border-radius: 100%;
   box-sizing: border-box;
 }
+
+@media(max-width: 1000px){
+  .fixed a span{
+    width: 92px;
+    height: 92px;
+    margin-left: -46px;
+    border: 6px solid #fff;
+  }
+}
+
 .fixed a span::after {
   position: absolute;
   top: 50%;
@@ -271,6 +288,17 @@ header {
   transform: rotate(-45deg);
   box-sizing: border-box;
 }
+
+@media(max-width: 1000px){
+  .fixed a span::after{
+    width: 32px;
+    height: 32px;
+    margin: -24px 0 0 -16px;
+    border-left: 6px solid #fff;
+    border-bottom: 6px solid #fff;
+  }
+}
+
 .fixed a span::before {
   position: absolute;
   top: 0;
@@ -285,6 +313,13 @@ header {
   -webkit-animation: sdb 3s infinite;
   animation: sdb 3s infinite;
   box-sizing: border-box;
+}
+
+@media(max-width: 1000px){
+  .fixed a span::before{
+    width: 88px;
+    height: 88px;
+  }
 }
 
 

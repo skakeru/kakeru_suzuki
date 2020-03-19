@@ -2,7 +2,9 @@ $(function(){
 
 
 
-  // キーワード説明hover
+   // キーワード説明hover
+  if(!navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)){
+
   $('.keyword').hover(
     function() {
       $(this).find('.hover-contents').addClass('hover-active');
@@ -13,6 +15,7 @@ $(function(){
 
     }
   );
+}
 
 
 // header段増やし(top)

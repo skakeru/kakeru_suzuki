@@ -467,6 +467,8 @@ header {
   }
 }
 
+
+
 /* scroll2枚目 ================================ */
 .scroll.scroll-2{
     position:relative;
@@ -509,15 +511,8 @@ header {
   float: right;
 }
 
-.subtitle h1{
-  font-size: 8vw;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 0;
-  padding-bottom: 0;
-  line-height: 0.8;
-  text-align: right;
-}
+
+
 
 /* scroll3枚目 ================================ */
 .scroll.scroll-3{

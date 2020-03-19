@@ -364,11 +364,30 @@ header {
   text-align: center;
 }
 
+@media(max-width: 1000px){
+  .wrapper-right h2{
+    font-size: 5vw;
+  }
+}
+
 .wrapper-right h1{
   font-weight: bold;
   text-align: center;
   margin-top: 50px;
 }
+
+@media(max-width: 1000px){
+  .wrapper-right h1{
+    font-size: 7vw;
+  }
+}
+
+@media(max-width: 1000px){
+  .name h1{
+    font-size: 10vw;
+  }
+}
+
 
 
 .button-photo{
@@ -390,6 +409,12 @@ header {
 
 .username{
   font-size: 25px;
+}
+
+@media(max-width: 1000px){
+  .username{
+    font-size: 6vw;
+  }
 }
 
 .fa-instagram{
@@ -578,6 +603,12 @@ header {
   font-size: 36px;
   margin-bottom: 20px;
 
+}
+
+@media(max-width: 1000px){
+  .social-icon{
+    font-size: 8vw;
+  }
 }
 
 #facebook-icon{

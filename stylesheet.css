@@ -1267,12 +1267,12 @@ header {
 .scroll-8-portfolio{
   position: relative;
   height: 100%;
-  overflow:hidden;
 }
 
 @media (max-width: 1000px){
   .scroll-8-portfolio{
     height: 350%;
+    overflow:hidden;
   }
 }
 
@@ -1315,12 +1315,13 @@ header {
   position: relative;
   height: 100%;
   margin-bottom: 30%;
-  overflow:hidden;
+  
 }
 	
 @media (max-width: 1000px){
   .scroll-9-portfolio{
     height: 200%;
+    overflow:hidden;
   }
 }
 

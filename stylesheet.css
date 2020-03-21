@@ -1095,7 +1095,12 @@ header {
 .scroll-2-portfolio{
   position: relative;
   height: 100%;;
-  min-height: none;
+}
+
+@media (max-width: 1000px){
+  .scroll-2-portfolio{
+    height: 260%;
+  }
 }
 
 .subtitle-left{
@@ -1117,6 +1122,12 @@ header {
   color: white;
 }
 
+@media (max-width: 1000px){
+  .subtitle-left h1{
+    font-size: 15vw;
+  }
+}
+
 
 
 .wrapper-portfolio{
@@ -1133,6 +1144,15 @@ header {
   text-align: center;
 }
 
+@media (max-width: 1000px){
+  .container-for-works{
+    display: block;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
 .item img{
   width: 58%;
   position: relative;
@@ -1140,6 +1160,14 @@ header {
   left: 0;
   right: 0;
   vertical-align: middle;
+}
+
+@media (max-width: 1000px){
+  .item{
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 100px;
+  }
 }
 
 .item-pc img{
@@ -1159,6 +1187,12 @@ header {
   margin-top: 10px;
 }
 
+@media (max-width: 1000px){
+  .work-title {
+    margin-top: 40px;
+  }
+}
+
 .work-title h1{
   font-family: 'Hiragino Sans';
   font-size: 3vw;
@@ -1166,6 +1200,12 @@ header {
   padding-left: 20px;
   padding-right: 20px;
   margin-top: 0px;
+}
+
+@media (max-width: 1000px){
+  .work-title h1{
+    font-size: 8vw;
+  }
 }
 
 .work-descriptions{
@@ -1197,6 +1237,19 @@ header {
 
 }
 
+@media (max-width: 1000px){
+  .button-to-work{
+    font-size: 6vw;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 1000px){
+  .button-to-work-for-olympic{
+    font-size: 4vw;
+  }
+}
+
 /* scroll3枚目 ================================ */
 .scroll-3-portfolio{
   position: relative;
@@ -1204,12 +1257,17 @@ header {
   margin-bottom: 20%;
 }
 
+@media (max-width: 1000px){
+  .scroll-3-portfolio{
+    height: 120%;
+  }
+}
+
 
 /* scroll4枚目 ================================ */
 .scroll-4-portfolio{
   position: relative;
   height: 100%;
-  overflow:hidden;
 
 }
 
@@ -1224,10 +1282,22 @@ header {
   height: 100%;
 }
 
+@media (max-width: 1000px){
+  .scroll-5-portfolio{
+    height: 370%;
+  }
+}
+
 /* scroll6枚目 ================================ */
 .scroll-6-portfolio{
   position: relative;
   height: 100%;
+}
+
+@media (max-width: 1000px){
+  .scroll-6-portfolio{
+    height: 250%;
+  }
 }
 
 /* scroll7枚目 ================================ */
@@ -1236,9 +1306,22 @@ header {
   height: 100%;
 }
 
+@media (max-width: 1000px){
+  .scroll-7-portfolio{
+    height: 600%;
+  }
+}
+
 .item-sp-lp{
   width: 20%;
 }
+
+@media (max-width: 1000px){
+  .item-sp-lp{
+    width: 100%;
+  }
+}
+
 .item-sp-lp img{
   width: 90%;
 }
@@ -1251,8 +1334,20 @@ header {
   overflow:hidden;
 }
 
+@media (max-width: 1000px){
+  .scroll-8-portfolio{
+    height: 350%;
+  }
+}
+
 .item-pc-lp{
   width: 30%;
+}
+
+@media (max-width: 1000px){
+  .item-pc-lp{
+    width: 100%;
+  }
 }
 
 .item-pc-lp img{
@@ -1263,9 +1358,20 @@ header {
   width: 90%;
 }
 
+@media (max-width: 1000px){
+  .item-pc-lp-top{
+    width: 100%;
+  }
+}
+
 .item-pc-lp-top img{
   width: 90%;
 }
+
+@media (max-width: 1000px){
+  .button-to-work-for-travel-match{
+    font-size: 4vw;
+  }
 
 /* scroll9枚目 ================================ */
 .scroll-9-portfolio{
@@ -1274,12 +1380,24 @@ header {
   margin-bottom: 30%;
   overflow:hidden;
 }
+	
+@media (max-width: 1000px){
+  .scroll-9-portfolio{
+    height: 200%;
+  }
+}
 
 /* scroll10枚目 ================================ */
 .scroll-10-portfolio{
   position: relative;
   height: 100%;
   min-height: 50%;
+}
+	
+@media (max-width: 1000px){
+  .scroll-10-portfolio{
+    height: 110%;
+  }
 }
 
 .item-logo{
@@ -1301,8 +1419,19 @@ header {
   height: 100%;
 }
 
-/* scroll2枚目 ================================ */
+@media (max-width: 1000px){
+  .scroll-11-portfolio{
+    height: 130%;
+  }
+}
+/* scroll12枚目 ================================ */
 .scroll-12-portfolio{
   position: relative;
   height: 100%;
+}
+	
+@media (max-width: 1000px){
+  .work-title-for-movie h1{
+    font-size: 6vw;
+  }
 }

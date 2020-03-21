@@ -772,7 +772,7 @@ header {
 
 @media(max-width: 1000px){
  .header-item-photo{
-    font-size: 6vw;
+    font-size: 10vw;
     margin-left: 0;
     margin-right: 0;
   }
@@ -1179,6 +1179,13 @@ header {
   margin-top: 40px;
 }
 
+@media (max-width: 1000px){
+  .item-pc img{
+    left: 0;
+    width: 90%;
+  }
+}
+
 
 .work-title{
   background: #7C0001;
@@ -1372,6 +1379,7 @@ header {
   .button-to-work-for-travel-match{
     font-size: 4vw;
   }
+}
 
 /* scroll9枚目 ================================ */
 .scroll-9-portfolio{

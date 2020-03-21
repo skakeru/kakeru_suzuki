@@ -1099,7 +1099,7 @@ header {
 
 @media (max-width: 1000px){
   .scroll-2-portfolio{
-    height: 260%;
+    height: 280%;
   }
 }
 
@@ -1409,7 +1409,7 @@ header {
 }
 
 .item-logo{
-  width: 50%;
+  width: 80%;
   margin-top: 5%;
 }
 
@@ -1429,7 +1429,7 @@ header {
 
 @media (max-width: 1000px){
   .scroll-11-portfolio{
-    height: 130%;
+    height: 150%;
   }
 }
 /* scroll12枚目 ================================ */

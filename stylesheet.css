@@ -526,6 +526,10 @@ header {
   margin-top: 20px;
 }
 
+.for-sp{
+  display: none;
+}
+
 @media(max-width: 1000px){
   .scroll-2 h1{
       font-size: 6vw;

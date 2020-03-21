@@ -1085,6 +1085,12 @@ header {
   color: white;
 }
 
+@media (max-width: 1000px){
+  #title-spelled-portfolio{
+    font-size: 22vw;
+  }
+}
+
 
 
 /* scroll2枚目 ================================ */

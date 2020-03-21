@@ -1040,7 +1040,6 @@ header {
 /* header ================================ */
 .header-portfolio{
   background: #7C0001;
-  overflow:hidden;
 }
 
 .header-item-portfolio{
@@ -1075,7 +1074,6 @@ header {
 /* fix1枚目 ================================ */
 .fixed-1-portfolio{
   background-image: url("hero/w5JawBO.jpg");
-  overflow:hidden;
 
 }
 
@@ -1098,7 +1096,6 @@ header {
   position: relative;
   height: 100%;;
   min-height: none;
-  overflow:hidden;
 }
 
 .subtitle-left{
@@ -1205,7 +1202,6 @@ header {
   position: relative;
   height: 100%;
   margin-bottom: 20%;
-  overflow:hidden;
 }
 
 
@@ -1226,21 +1222,18 @@ header {
 .scroll-5-portfolio{
   position: relative;
   height: 100%;
-  overflow:hidden;
 }
 
 /* scroll6枚目 ================================ */
 .scroll-6-portfolio{
   position: relative;
   height: 100%;
-  overflow:hidden;
 }
 
 /* scroll7枚目 ================================ */
 .scroll-7-portfolio{
   position: relative;
   height: 100%;
-  overflow:hidden;
 }
 
 .item-sp-lp{
@@ -1287,7 +1280,6 @@ header {
   position: relative;
   height: 100%;
   min-height: 50%;
-  overflow:hidden;
 }
 
 .item-logo{
@@ -1307,12 +1299,10 @@ header {
 .scroll-11-portfolio{
   position: relative;
   height: 100%;
-  overflow:hidden;
 }
 
 /* scroll2枚目 ================================ */
 .scroll-12-portfolio{
   position: relative;
   height: 100%;
-  overflow:hidden;
 }

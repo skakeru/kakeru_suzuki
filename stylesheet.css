@@ -1140,7 +1140,9 @@ header {
   width: 58%;
   position: relative;
   top: auto;
-  right: auto;
+  left: 0;
+  right: 0;
+  vertical-align: middle;
 }
 
 .item-pc img{

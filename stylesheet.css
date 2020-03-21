@@ -770,6 +770,14 @@ header {
   flex-wrap: wrap;
 }
 
+@media(max-width: 1000px){
+ .header-item-photo{
+    font-size: 6vw;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 
 
 .header-item-photo-hide{

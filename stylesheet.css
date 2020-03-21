@@ -908,6 +908,12 @@ header {
   padding-top: 10px;
 }
 
+@media(max-width: 1000px){
+ .subtitle.subtitle-photo h1{
+      font-size: 10vw;
+  }
+}
+
 /* fix3枚目 ================================ */
 .fixed-3-photo{
   background-image: url("hero/3Syuqnv.jpg");

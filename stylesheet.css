@@ -801,6 +801,13 @@ header {
   padding-top: 1%;
 }
 
+@media(max-width: 1000px){
+ .headers-item-photo-hide a{
+    font-size: 6vw;
+  }
+}
+
+
 /* fix1枚目 ================================ */
 .fixed-1-photo{
   background-image: url("memories-black.jpg");
@@ -985,6 +992,12 @@ header {
 .headers-item-portfolio-hide a{
   font-size: 3vw;
   padding-top: 2%;
+}
+
+@media (max-width: 1000px){
+  .headers-item-portfolio-hide a{
+	  font-size: 6vw;
+ }
 }
 
 /* fix1枚目 ================================ */

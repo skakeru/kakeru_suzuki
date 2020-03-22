@@ -1192,6 +1192,7 @@ header {
   .button-to-work{
     font-size: 6vw;
     z-index: 1;
+    border-width: 10px;
   }
 }
 

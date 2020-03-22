@@ -719,6 +719,10 @@ header {
   display: block;
 }
 
+.flag .win{
+  display: none;
+}
+
 /* フッター ================================ */
 .footer {
   text-align: center;

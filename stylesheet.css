@@ -718,6 +718,12 @@ header {
   background-color: #7C0001;
 }
 
+@media(max-width: 1000px){
+  .keyword-portfolio-2 a{
+     font-size: 40px;
+  }
+}
+
 .hover-contents{
   display: none;
   letter-spacing: 0px;

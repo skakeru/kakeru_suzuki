@@ -1212,6 +1212,13 @@ header {
   }
 }
 
+.button-to-work-for-triphoto{
+    pointer-events:none;
+}
+
+
+
+
 /* scroll3枚目 ================================ */
 .scroll-3-portfolio{
   position: relative;
@@ -1350,6 +1357,11 @@ header {
     overflow:hidden;
   }
 }
+
+.button-to-work-for-triphoto{
+    pointer-events:none;
+}
+
 
 /* scroll10枚目 ================================ */
 .scroll-10-portfolio{

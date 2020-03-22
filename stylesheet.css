@@ -704,8 +704,15 @@ header {
 
 .keyword-portfolio-1 a{
   background-color: #7C0001;
-  font-size: 40px;
 }
+
+@media(max-width: 1000px){
+  .keyword-portfolio-1 a{
+     font-size: 40px;
+  }
+}
+
+
 
 .keyword-portfolio-2 a{
   background-color: #7C0001;

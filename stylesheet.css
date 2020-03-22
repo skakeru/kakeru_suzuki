@@ -1265,7 +1265,7 @@ header {
 /* scroll7枚目 ================================ */
 .scroll-7-portfolio{
   position: relative;
-  height: 120%;
+  height: 130%;
 }
 
 @media (max-width: 1000px){
@@ -1292,7 +1292,7 @@ header {
 /* scroll8枚目 ================================ */
 .scroll-8-portfolio{
   position: relative;
-  height: 140%;
+  height: 160%;
 }
 
 @media (max-width: 1000px){

@@ -1037,7 +1037,7 @@ header {
 
 @media (max-width: 1000px){
   .scroll-2-portfolio{
-    height: 280%;
+    height: 300%;
   }
 }
 
@@ -1204,7 +1204,7 @@ header {
 
 @media (max-width: 1000px){
   .scroll-3-portfolio{
-    height: 120%;
+    height: 140%;
   }
 }
 
@@ -1229,7 +1229,7 @@ header {
 
 @media (max-width: 1000px){
   .scroll-5-portfolio{
-    height: 370%;
+    height: 390%;
   }
 }
 
@@ -1241,7 +1241,7 @@ header {
 
 @media (max-width: 1000px){
   .scroll-6-portfolio{
-    height: 250%;
+    height: 270%;
   }
 }
 
@@ -1253,7 +1253,7 @@ header {
 
 @media (max-width: 1000px){
   .scroll-7-portfolio{
-    height: 600%;
+    height: 620%;
   }
 }
 
@@ -1280,7 +1280,7 @@ header {
 
 @media (max-width: 1000px){
   .scroll-8-portfolio{
-    height: 350%;
+    height: 370%;
     overflow:hidden;
   }
 }
@@ -1329,7 +1329,7 @@ header {
 	
 @media (max-width: 1000px){
   .scroll-9-portfolio{
-    height: 200%;
+    height: 220%;
     overflow:hidden;
   }
 }
@@ -1343,7 +1343,7 @@ header {
 	
 @media (max-width: 1000px){
   .scroll-10-portfolio{
-    height: 110%;
+    height: 130%;
   }
 }
 
@@ -1368,7 +1368,7 @@ header {
 
 @media (max-width: 1000px){
   .scroll-11-portfolio{
-    height: 150%;
+    height: 170%;
   }
 }
 /* scroll12枚目 ================================ */

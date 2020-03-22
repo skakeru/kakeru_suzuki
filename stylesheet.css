@@ -255,6 +255,7 @@ header {
   padding-top: 60px;
   color: white;
   font-size: 30px;
+  pointer-events:none;
 }
 
 @media(max-width: 1000px){

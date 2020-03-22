@@ -1061,6 +1061,12 @@ header {
 }
 
 @media (max-width: 1000px){
+  #title-spelled-portfolio{
+    line-height: 1.0;
+  }
+}
+
+@media (max-width: 1000px){
   .subtitle-left h1{
     font-size: 15vw;
   }

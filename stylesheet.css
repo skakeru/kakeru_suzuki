@@ -1222,7 +1222,7 @@ header {
 /* scroll3枚目 ================================ */
 .scroll-3-portfolio{
   position: relative;
-  height: 120%;
+  height: 2500px;
   margin-bottom: 20%;
 }
 
@@ -1236,7 +1236,7 @@ header {
 /* scroll4枚目 ================================ */
 .scroll-4-portfolio{
   position: relative;
-  height: 120%;
+  height: 2000px;
 
 }
 
@@ -1253,7 +1253,7 @@ header {
 
 @media (max-width: 1000px){
   .scroll-5-portfolio{
-    height: 390%;
+    height: 7000px;
   }
 }
 
@@ -1265,7 +1265,7 @@ header {
 
 @media (max-width: 1000px){
   .scroll-6-portfolio{
-    height: 270%;
+    height: 4500px;
   }
 }
 
@@ -1277,7 +1277,7 @@ header {
 
 @media (max-width: 1000px){
   .scroll-7-portfolio{
-    height: 620%;
+    height: 10700px;
   }
 }
 
@@ -1304,8 +1304,7 @@ header {
 
 @media (max-width: 1000px){
   .scroll-8-portfolio{
-    height: 370%;
-    overflow:hidden;
+    height: 6000px;
   }
 }
 
@@ -1353,7 +1352,7 @@ header {
 	
 @media (max-width: 1000px){
   .scroll-9-portfolio{
-    height: 220%;
+    height: 3500px;
     overflow:hidden;
   }
 }
@@ -1366,8 +1365,7 @@ header {
 /* scroll10枚目 ================================ */
 .scroll-10-portfolio{
   position: relative;
-  height: 120%;
-  min-height: 50%;
+  height: 2000px;
 }
 	
 @media (max-width: 1000px){
@@ -1392,7 +1390,7 @@ header {
 /* scroll11枚目 ================================ */
 .scroll-11-portfolio{
   position: relative;
-  height: 140%;
+  height: 2500px;
 }
 
 @media (max-width: 1000px){
@@ -1403,7 +1401,7 @@ header {
 /* scroll12枚目 ================================ */
 .scroll-12-portfolio{
   position: relative;
-  height: 120%;
+  height: 1700px;
 }
 	
 @media (max-width: 1000px){

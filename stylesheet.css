@@ -226,6 +226,21 @@ header {
     background-image: url("hero/Q2cu4Pm.jpg");
 }
 
+.fixed.fixed-1:after {
+  content: '';
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background: url('hero/Q2cu4Pm.jpg') center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 
 .title h1{
   font-size: 16vw;

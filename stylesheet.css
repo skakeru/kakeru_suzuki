@@ -52,18 +52,7 @@ body {
   position: relative;
 }
 
-body:before{
-    content: "";
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100vh;
-    background: url("hero/Q2cu4Pm.jpg") center no-repeat;
-    background-size: cover;
-}
+
 
 main{
   position: absolute;

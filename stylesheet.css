@@ -226,20 +226,6 @@ header {
     background-image: url("hero/Q2cu4Pm.jpg");
 }
 
-.fixed.fixed-1:after {
-  content: '';
-  position: fixed;
-  top: 0;
-  height: 100vh;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  background: url('hero/Q2cu4Pm.jpg') center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 
 
 .title h1{
@@ -386,6 +372,21 @@ header {
 
 
 /* scroll1枚目 ================================ */
+.scroll.scroll-1:before {
+  content: '';
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background: url('hero/Q2cu4Pm.jpg') center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .scroll.scroll-1{
     position:relative;
 }
@@ -532,6 +533,21 @@ header {
 
 
 /* scroll2枚目 ================================ */
+.scroll.scroll-2:before {
+  content: '';
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background: url('hero/s8rbOe9.jpg') center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .scroll.scroll-2{
     position:relative;
 }
@@ -641,6 +657,22 @@ header {
 
 
 /* scroll3枚目 ================================ */
+
+.scroll.scroll-3:before {
+  content: '';
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background: url('hero/EupaTNW.jpg') center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .scroll.scroll-3{
     position:relative;
 }

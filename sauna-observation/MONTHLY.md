@@ -8,8 +8,8 @@
    - 47都道府県合計が前回より大きく減っている（-3%超）場合は、サイト構造の変更を疑い、Slackに投稿せず原因を報告する。
 3. 考察段落を `notes/YYYY-MM-DD.txt` に2〜4文で書く（任意）。`report.py` の出力を見て、数字だけでは伝わらない動き（順位の入れ替わりの理由、人口が小さい県は1件のサ活で数値が動く、など）を説明する。数字は data/ と reports/ の値だけを使い、推測で数字を作らない。
 4. `python3 report.py --notes notes/YYYY-MM-DD.txt`
-5. `index.html` を Artifact URL（下記）に再公開する。
+5. `index.html` を Artifact URL（下記）に再公開する。別の会話からの更新なので、先に Artifact の `read` で読み、`url` を指定して `file_path: sauna-observation/index.html` で publish する（新しいURLを作らない）。
 6. Slack #全社-情報共有（C0BS756Q1DJ）に `reports/YYYY-MM-DD.txt` の本文を投稿する。先頭に1行「サウナイキタイ定点観測（YYYY年M月）」、末尾にベースページのURLを付ける。
 7. `data/`, `reports/`, `notes/`, `index.html` をコミットして `claude/adoring-hamilton-b4ihku` にpushする。
 
-Artifact URL: （初回公開後に記入）
+Artifact URL: https://claude.ai/artifact/TURXziyWRVg1uMhHkJqHbj

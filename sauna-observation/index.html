@@ -1,0 +1,212 @@
+<title>サウナイキタイ定点観測</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+/* Layout: 観測レポートの一枚紙。上から「今月の数字 → シェア文 → ランキング → 条件別 → 全県表 → 方法」 */
+:root{
+  --bg:#eef3f4; --panel:#ffffff; --fg:#13232b; --muted:#5b6f78; --line:#d4dfe3;
+  --cold:#0d6a8c; --cold-soft:#d6eaf1; --heat:#b4481b; --heat-soft:#f6e2d6;
+  --up:#0b7a52; --dn:#b42318;
+  --f-display:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",sans-serif;
+  --f-body:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic","Noto Sans JP",sans-serif;
+  --f-num:"JetBrains Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0c1519; --panel:#132128; --fg:#e4eef1; --muted:#93a8b1; --line:#24363e;
+  --cold:#5cc0e4; --cold-soft:#173543; --heat:#f08a5d; --heat-soft:#3a2219;
+  --up:#4cc995; --dn:#f2766b; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0c1519; --panel:#132128; --fg:#e4eef1; --muted:#93a8b1; --line:#24363e;
+  --cold:#5cc0e4; --cold-soft:#173543; --heat:#f08a5d; --heat-soft:#3a2219;
+  --up:#4cc995; --dn:#f2766b; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.75}
+.wrap{max-width:1040px;margin:0 auto;padding-block:32px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:40px}
+header{display:grid;gap:6px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--muted)}
+h1{font-family:var(--f-display);font-weight:900;font-size:clamp(26px,5vw,40px);line-height:1.25;margin:0;text-wrap:balance}
+h2{font-family:var(--f-display);font-weight:700;font-size:20px;margin:0 0 4px;text-wrap:balance}
+.note{color:var(--muted);font-size:13px;margin:0}
+.num,.mono{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:16px 18px;display:grid;gap:2px}
+.kpi .l{font-size:12px;color:var(--muted);letter-spacing:.06em}
+.kpi .v{font-family:var(--f-num);font-weight:700;font-size:clamp(28px,6vw,38px);line-height:1.2}
+.kpi .v small{font-size:14px;font-weight:500;color:var(--muted);margin-left:4px;font-family:var(--f-body)}
+.kpi .s{font-size:12px;color:var(--muted)}
+.kpi.main{border-color:var(--cold);background:var(--cold-soft)}
+section{display:grid;gap:14px;min-width:0}
+.share{background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.share-bar{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 14px;border-bottom:1px solid var(--line);font-size:13px;color:var(--muted);flex-wrap:wrap}
+.share pre{margin:0;padding:16px 18px;white-space:pre-wrap;word-break:break-word;font-family:var(--f-body);font-size:14.5px;line-height:1.85;max-height:520px;overflow:auto}
+button{font:inherit;font-size:13px;font-weight:700;border:1px solid var(--cold);background:var(--cold);color:var(--panel);border-radius:4px;padding:6px 14px;cursor:pointer}
+button:focus-visible{outline:3px solid var(--heat);outline-offset:2px}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+ol.bars{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+ol.bars li{display:grid;grid-template-columns:22px 5.5em minmax(0,1fr) 4.6em;align-items:center;gap:8px;font-size:14px}
+ol.bars .rk{font-family:var(--f-num);color:var(--muted);font-size:12px;text-align:right}
+ol.bars .bar{height:14px;background:var(--heat-soft);border-radius:2px;overflow:hidden}
+ol.bars .bar i{display:block;height:100%;background:var(--heat)}
+ol.bars .v{font-family:var(--f-num);text-align:right;font-weight:700}
+.conds{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.cc{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:14px 16px}
+.cc h3{margin:0 0 8px;font-size:15px;font-family:var(--f-display)}
+.cc dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:13px}
+.cc dt{color:var(--muted)}
+.cc dd{margin:0;display:flex;justify-content:space-between;gap:8px}
+.cc dd span{font-family:var(--f-num)}
+.chart{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:12px}
+.chart svg{display:block;width:100%;height:auto}
+.tbl{overflow-x:auto;background:var(--panel);border:1px solid var(--line);border-radius:6px}
+table{border-collapse:collapse;width:100%;font-size:13px;min-width:820px}
+th,td{padding:7px 10px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
+th{font-size:12px;color:var(--muted);font-weight:700;position:sticky;top:0;background:var(--panel);cursor:pointer;user-select:none}
+th[aria-sort]::after{content:" ▾";color:var(--cold)}
+th[aria-sort="ascending"]::after{content:" ▴"}
+td.num,th.num{text-align:right}
+td small{display:block;color:var(--muted);font-size:11px}
+td.up{color:var(--up);font-weight:700} td.dn{color:var(--dn);font-weight:700} td.z{color:var(--muted)}
+tbody tr:hover{background:var(--cold-soft)}
+.method{font-size:13.5px;color:var(--muted);max-width:68ch}
+.method li{margin-bottom:4px}
+@media (prefers-reduced-motion:no-preference){ol.bars .bar i{transition:width .4s ease}}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">SAUNA-IKITAI FIXED-POINT OBSERVATION</div>
+    <h1>サウナイキタイ定点観測</h1>
+    <p class="note">観測日 <span class="mono">2026-11-16</span>　／　観測回数 <span class="mono">1</span>回　／　毎月1日に更新</p>
+  </header>
+
+  <div class="kpis">
+    <div class="kpi main"><span class="l">全国登録施設数</span><span class="v">13,810<small>件</small></span><span class="s">47都道府県の合計</span></div>
+    <div class="kpi"><span class="l">前回比</span><span class="v">—<small>件</small></span><span class="s">初回観測。次回から比較</span></div>
+    <div class="kpi"><span class="l">1日あたり増加</span><span class="v">—<small>件/日</small></span><span class="s">前回比 ÷ 観測間隔の日数</span></div>
+  </div>
+
+  <section id="share">
+    <h2>今月のシェア文</h2>
+    <div class="share">
+      <div class="share-bar"><span>そのまま貼り付けられる形式です</span><button id="copy" type="button">コピー</button></div>
+      <pre id="share-text">サウナイキタイの全国登録施設数は、13,810件となりました。
+
+今回が観測開始です。次回から前回比・1日あたりの増加ペースを掲載します。
+
+【人口あたり活発度 全国TOP5】
+※人口10万人あたりのサ活数。「サウナ熱の濃さ」を見るための指標です。
+
+東京都　17,901
+北海道　11,391
+山梨県　11,333
+富山県　10,578
+神奈川県　8,694
+
+【条件別登録施設数 都道府県1位】
+
+・水着着用：千葉県（155件）
+・プライベートサウナ：東京都（83件）
+・アウフグース：東京都（114件）
+・タトゥーOK：東京都（432件）
+
+【条件別 構成比 都道府県1位】
+※その県の登録施設のうち何％がその条件か。括弧内は全国平均です。
+
+・水着着用：沖縄県 39.0％（全国平均 14.8％）
+・プライベートサウナ：熊本県 9.6％（同 5.1％）
+・アウフグース：沖縄県 15.9％（同 10.5％）
+・タトゥーOK：東京都 44.5％（同 25.9％）
+</pre>
+    </div>
+  </section>
+
+  <div class="two">
+    <section id="activity">
+      <h2>人口あたり活発度 TOP10</h2>
+      <p class="note">人口10万人あたりのサ活数。サ活数は各県の登録施設に投稿された累計。</p>
+      <ol class="bars"><li><span class="rk">1</span><span class="nm">東京都</span><span class="bar"><i style="width:100.0%"></i></span><span class="v">17,901</span></li><li><span class="rk">2</span><span class="nm">北海道</span><span class="bar"><i style="width:63.6%"></i></span><span class="v">11,391</span></li><li><span class="rk">3</span><span class="nm">山梨県</span><span class="bar"><i style="width:63.3%"></i></span><span class="v">11,333</span></li><li><span class="rk">4</span><span class="nm">富山県</span><span class="bar"><i style="width:59.1%"></i></span><span class="v">10,578</span></li><li><span class="rk">5</span><span class="nm">神奈川県</span><span class="bar"><i style="width:48.6%"></i></span><span class="v">8,694</span></li><li><span class="rk">6</span><span class="nm">岐阜県</span><span class="bar"><i style="width:46.7%"></i></span><span class="v">8,358</span></li><li><span class="rk">7</span><span class="nm">埼玉県</span><span class="bar"><i style="width:45.7%"></i></span><span class="v">8,173</span></li><li><span class="rk">8</span><span class="nm">石川県</span><span class="bar"><i style="width:44.7%"></i></span><span class="v">8,010</span></li><li><span class="rk">9</span><span class="nm">宮城県</span><span class="bar"><i style="width:43.4%"></i></span><span class="v">7,762</span></li><li><span class="rk">10</span><span class="nm">静岡県</span><span class="bar"><i style="width:43.1%"></i></span><span class="v">7,714</span></li></ol>
+    </section>
+    <section id="trend">
+      <h2>全国登録施設数の推移</h2>
+      <p class="note">観測日ごとの47都道府県合計。</p>
+      <div class="chart" id="chart"></div>
+    </section>
+  </div>
+
+  <section id="conditions">
+    <h2>条件別 都道府県1位</h2>
+    <p class="note">構成比は、その県の登録施設のうちその条件に当てはまる割合。</p>
+    <div class="conds"><div class="cc"><h3>水着着用</h3><dl><dt>施設数1位</dt><dd><b>千葉県</b><span>155件</span></dd><dt>構成比1位</dt><dd><b>沖縄県</b><span>39.0%</span></dd><dt>全国</dt><dd><b>2,039件</b><span>平均 14.8%</span></dd></dl></div><div class="cc"><h3>プライベートサウナ</h3><dl><dt>施設数1位</dt><dd><b>東京都</b><span>83件</span></dd><dt>構成比1位</dt><dd><b>熊本県</b><span>9.6%</span></dd><dt>全国</dt><dd><b>699件</b><span>平均 5.1%</span></dd></dl></div><div class="cc"><h3>アウフグース</h3><dl><dt>施設数1位</dt><dd><b>東京都</b><span>114件</span></dd><dt>構成比1位</dt><dd><b>沖縄県</b><span>15.9%</span></dd><dt>全国</dt><dd><b>1,450件</b><span>平均 10.5%</span></dd></dl></div><div class="cc"><h3>タトゥーOK</h3><dl><dt>施設数1位</dt><dd><b>東京都</b><span>432件</span></dd><dt>構成比1位</dt><dd><b>東京都</b><span>44.5%</span></dd><dt>全国</dt><dd><b>3,579件</b><span>平均 25.9%</span></dd></dl></div></div>
+  </section>
+
+  <section id="table">
+    <h2>都道府県別データ</h2>
+    <p class="note">見出しをクリックすると並べ替えできます。条件別の下段は構成比。</p>
+    <div class="tbl"><table id="pref">
+      <thead><tr><th data-k="0">都道府県</th><th class="num">施設数</th><th class="num">サ活数</th><th class="num">活発度</th><th class="num">順位</th><th class="num">水着着用</th><th class="num">プライベートサウナ</th><th class="num">アウフグース</th><th class="num">タトゥーOK</th></tr></thead>
+      <tbody><tr><td>北海道</td><td class="num">978</td><td class="num">595,157</td><td class="num">11,391</td><td class="num">2</td><td class="num">98<small>10.0%</small></td><td class="num">39<small>4.0%</small></td><td class="num">87<small>8.9%</small></td><td class="num">211<small>21.6%</small></td></tr><tr><td>青森県</td><td class="num">206</td><td class="num">57,797</td><td class="num">4,669</td><td class="num">22</td><td class="num">14<small>6.8%</small></td><td class="num">4<small>1.9%</small></td><td class="num">8<small>3.9%</small></td><td class="num">70<small>34.0%</small></td></tr><tr><td>岩手県</td><td class="num">159</td><td class="num">68,248</td><td class="num">5,638</td><td class="num">15</td><td class="num">11<small>6.9%</small></td><td class="num">3<small>1.9%</small></td><td class="num">16<small>10.1%</small></td><td class="num">26<small>16.4%</small></td></tr><tr><td>宮城県</td><td class="num">202</td><td class="num">178,683</td><td class="num">7,762</td><td class="num">9</td><td class="num">28<small>13.9%</small></td><td class="num">13<small>6.4%</small></td><td class="num">20<small>9.9%</small></td><td class="num">52<small>25.7%</small></td></tr><tr><td>秋田県</td><td class="num">166</td><td class="num">52,420</td><td class="num">5,463</td><td class="num">18</td><td class="num">23<small>13.9%</small></td><td class="num">8<small>4.8%</small></td><td class="num">8<small>4.8%</small></td><td class="num">34<small>20.5%</small></td></tr><tr><td>山形県</td><td class="num">133</td><td class="num">58,749</td><td class="num">5,501</td><td class="num">17</td><td class="num">19<small>14.3%</small></td><td class="num">8<small>6.0%</small></td><td class="num">11<small>8.3%</small></td><td class="num">38<small>28.6%</small></td></tr><tr><td>福島県</td><td class="num">242</td><td class="num">60,789</td><td class="num">3,316</td><td class="num">33</td><td class="num">38<small>15.7%</small></td><td class="num">10<small>4.1%</small></td><td class="num">22<small>9.1%</small></td><td class="num">45<small>18.6%</small></td></tr><tr><td>茨城県</td><td class="num">265</td><td class="num">101,983</td><td class="num">3,557</td><td class="num">29</td><td class="num">56<small>21.1%</small></td><td class="num">20<small>7.5%</small></td><td class="num">34<small>12.8%</small></td><td class="num">57<small>21.5%</small></td></tr><tr><td>栃木県</td><td class="num">317</td><td class="num">94,123</td><td class="num">4,869</td><td class="num">20</td><td class="num">47<small>14.8%</small></td><td class="num">21<small>6.6%</small></td><td class="num">30<small>9.5%</small></td><td class="num">59<small>18.6%</small></td></tr><tr><td>群馬県</td><td class="num">298</td><td class="num">76,684</td><td class="num">3,955</td><td class="num">26</td><td class="num">51<small>17.1%</small></td><td class="num">14<small>4.7%</small></td><td class="num">41<small>13.8%</small></td><td class="num">61<small>20.5%</small></td></tr><tr><td>埼玉県</td><td class="num">375</td><td class="num">600,308</td><td class="num">8,173</td><td class="num">7</td><td class="num">43<small>11.5%</small></td><td class="num">18<small>4.8%</small></td><td class="num">55<small>14.7%</small></td><td class="num">97<small>25.9%</small></td></tr><tr><td>千葉県</td><td class="num">651</td><td class="num">471,272</td><td class="num">7,499</td><td class="num">11</td><td class="num">155<small>23.8%</small></td><td class="num">31<small>4.8%</small></td><td class="num">102<small>15.7%</small></td><td class="num">220<small>33.8%</small></td></tr><tr><td>東京都</td><td class="num">970</td><td class="num">2,514,662</td><td class="num">17,901</td><td class="num">1</td><td class="num">92<small>9.5%</small></td><td class="num">83<small>8.6%</small></td><td class="num">114<small>11.8%</small></td><td class="num">432<small>44.5%</small></td></tr><tr><td>神奈川県</td><td class="num">622</td><td class="num">803,124</td><td class="num">8,694</td><td class="num">5</td><td class="num">74<small>11.9%</small></td><td class="num">32<small>5.1%</small></td><td class="num">73<small>11.7%</small></td><td class="num">204<small>32.8%</small></td></tr><tr><td>新潟県</td><td class="num">277</td><td class="num">94,961</td><td class="num">4,314</td><td class="num">24</td><td class="num">41<small>14.8%</small></td><td class="num">5<small>1.8%</small></td><td class="num">23<small>8.3%</small></td><td class="num">60<small>21.7%</small></td></tr><tr><td>富山県</td><td class="num">158</td><td class="num">109,466</td><td class="num">10,578</td><td class="num">4</td><td class="num">16<small>10.1%</small></td><td class="num">6<small>3.8%</small></td><td class="num">20<small>12.7%</small></td><td class="num">33<small>20.9%</small></td></tr><tr><td>石川県</td><td class="num">220</td><td class="num">90,712</td><td class="num">8,010</td><td class="num">8</td><td class="num">18<small>8.2%</small></td><td class="num">3<small>1.4%</small></td><td class="num">22<small>10.0%</small></td><td class="num">45<small>20.5%</small></td></tr><tr><td>福井県</td><td class="num">117</td><td class="num">24,695</td><td class="num">3,220</td><td class="num">34</td><td class="num">13<small>11.1%</small></td><td class="num">5<small>4.3%</small></td><td class="num">10<small>8.5%</small></td><td class="num">21<small>17.9%</small></td></tr><tr><td>山梨県</td><td class="num">397</td><td class="num">91,791</td><td class="num">11,333</td><td class="num">3</td><td class="num">102<small>25.7%</small></td><td class="num">19<small>4.8%</small></td><td class="num">45<small>11.3%</small></td><td class="num">108<small>27.2%</small></td></tr><tr><td>長野県</td><td class="num">590</td><td class="num">129,032</td><td class="num">6,300</td><td class="num">13</td><td class="num">126<small>21.4%</small></td><td class="num">28<small>4.7%</small></td><td class="num">72<small>12.2%</small></td><td class="num">163<small>27.6%</small></td></tr><tr><td>岐阜県</td><td class="num">286</td><td class="num">165,374</td><td class="num">8,358</td><td class="num">6</td><td class="num">62<small>21.7%</small></td><td class="num">15<small>5.2%</small></td><td class="num">30<small>10.5%</small></td><td class="num">61<small>21.3%</small></td></tr><tr><td>静岡県</td><td class="num">663</td><td class="num">280,272</td><td class="num">7,714</td><td class="num">10</td><td class="num">118<small>17.8%</small></td><td class="num">26<small>3.9%</small></td><td class="num">70<small>10.6%</small></td><td class="num">159<small>24.0%</small></td></tr><tr><td>愛知県</td><td class="num">465</td><td class="num">492,776</td><td class="num">6,533</td><td class="num">12</td><td class="num">27<small>5.8%</small></td><td class="num">16<small>3.4%</small></td><td class="num">52<small>11.2%</small></td><td class="num">119<small>25.6%</small></td></tr><tr><td>三重県</td><td class="num">213</td><td class="num">65,329</td><td class="num">3,690</td><td class="num">27</td><td class="num">38<small>17.8%</small></td><td class="num">10<small>4.7%</small></td><td class="num">24<small>11.3%</small></td><td class="num">45<small>21.1%</small></td></tr><tr><td>滋賀県</td><td class="num">191</td><td class="num">51,465</td><td class="num">3,641</td><td class="num">28</td><td class="num">46<small>24.1%</small></td><td class="num">12<small>6.3%</small></td><td class="num">22<small>11.5%</small></td><td class="num">49<small>25.7%</small></td></tr><tr><td>京都府</td><td class="num">347</td><td class="num">145,142</td><td class="num">5,630</td><td class="num">16</td><td class="num">45<small>13.0%</small></td><td class="num">14<small>4.0%</small></td><td class="num">32<small>9.2%</small></td><td class="num">133<small>38.3%</small></td></tr><tr><td>大阪府</td><td class="num">656</td><td class="num">479,512</td><td class="num">5,426</td><td class="num">19</td><td class="num">59<small>9.0%</small></td><td class="num">40<small>6.1%</small></td><td class="num">63<small>9.6%</small></td><td class="num">238<small>36.3%</small></td></tr><tr><td>兵庫県</td><td class="num">510</td><td class="num">181,830</td><td class="num">3,327</td><td class="num">32</td><td class="num">87<small>17.1%</small></td><td class="num">27<small>5.3%</small></td><td class="num">44<small>8.6%</small></td><td class="num">125<small>24.5%</small></td></tr><tr><td>奈良県</td><td class="num">96</td><td class="num">30,773</td><td class="num">2,323</td><td class="num">42</td><td class="num">13<small>13.5%</small></td><td class="num">2<small>2.1%</small></td><td class="num">8<small>8.3%</small></td><td class="num">21<small>21.9%</small></td></tr><tr><td>和歌山県</td><td class="num">132</td><td class="num">23,425</td><td class="num">2,539</td><td class="num">40</td><td class="num">36<small>27.3%</small></td><td class="num">8<small>6.1%</small></td><td class="num">21<small>15.9%</small></td><td class="num">37<small>28.0%</small></td></tr><tr><td>鳥取県</td><td class="num">70</td><td class="num">16,919</td><td class="num">3,057</td><td class="num">37</td><td class="num">11<small>15.7%</small></td><td class="num">1<small>1.4%</small></td><td class="num">7<small>10.0%</small></td><td class="num">12<small>17.1%</small></td></tr><tr><td>島根県</td><td class="num">106</td><td class="num">13,451</td><td class="num">2,004</td><td class="num">44</td><td class="num">19<small>17.9%</small></td><td class="num">4<small>3.8%</small></td><td class="num">10<small>9.4%</small></td><td class="num">13<small>12.3%</small></td></tr><tr><td>岡山県</td><td class="num">148</td><td class="num">29,205</td><td class="num">1,547</td><td class="num">46</td><td class="num">22<small>14.9%</small></td><td class="num">9<small>6.1%</small></td><td class="num">12<small>8.1%</small></td><td class="num">23<small>15.5%</small></td></tr><tr><td>広島県</td><td class="num">225</td><td class="num">80,579</td><td class="num">2,878</td><td class="num">38</td><td class="num">32<small>14.2%</small></td><td class="num">10<small>4.4%</small></td><td class="num">28<small>12.4%</small></td><td class="num">44<small>19.6%</small></td></tr><tr><td>山口県</td><td class="num">170</td><td class="num">20,597</td><td class="num">1,535</td><td class="num">47</td><td class="num">16<small>9.4%</small></td><td class="num">7<small>4.1%</small></td><td class="num">8<small>4.7%</small></td><td class="num">27<small>15.9%</small></td></tr><tr><td>徳島県</td><td class="num">94</td><td class="num">13,970</td><td class="num">1,941</td><td class="num">45</td><td class="num">8<small>8.5%</small></td><td class="num">4<small>4.3%</small></td><td class="num">8<small>8.5%</small></td><td class="num">16<small>17.0%</small></td></tr><tr><td>香川県</td><td class="num">140</td><td class="num">38,216</td><td class="num">4,022</td><td class="num">25</td><td class="num">20<small>14.3%</small></td><td class="num">2<small>1.4%</small></td><td class="num">14<small>10.0%</small></td><td class="num">26<small>18.6%</small></td></tr><tr><td>愛媛県</td><td class="num">153</td><td class="num">41,701</td><td class="num">3,124</td><td class="num">35</td><td class="num">13<small>8.5%</small></td><td class="num">3<small>2.0%</small></td><td class="num">12<small>7.8%</small></td><td class="num">22<small>14.4%</small></td></tr><tr><td>高知県</td><td class="num">93</td><td class="num">17,716</td><td class="num">2,562</td><td class="num">39</td><td class="num">14<small>15.1%</small></td><td class="num">2<small>2.2%</small></td><td class="num">8<small>8.6%</small></td><td class="num">23<small>24.7%</small></td></tr><tr><td>福岡県</td><td class="num">324</td><td class="num">232,364</td><td class="num">4,525</td><td class="num">23</td><td class="num">45<small>13.9%</small></td><td class="num">29<small>9.0%</small></td><td class="num">43<small>13.3%</small></td><td class="num">74<small>22.8%</small></td></tr><tr><td>佐賀県</td><td class="num">106</td><td class="num">47,367</td><td class="num">5,837</td><td class="num">14</td><td class="num">15<small>14.2%</small></td><td class="num">8<small>7.5%</small></td><td class="num">8<small>7.5%</small></td><td class="num">25<small>23.6%</small></td></tr><tr><td>長崎県</td><td class="num">145</td><td class="num">27,612</td><td class="num">2,104</td><td class="num">43</td><td class="num">22<small>15.2%</small></td><td class="num">6<small>4.1%</small></td><td class="num">10<small>6.9%</small></td><td class="num">29<small>20.0%</small></td></tr><tr><td>熊本県</td><td class="num">260</td><td class="num">83,699</td><td class="num">4,815</td><td class="num">21</td><td class="num">28<small>10.8%</small></td><td class="num">25<small>9.6%</small></td><td class="num">23<small>8.8%</small></td><td class="num">45<small>17.3%</small></td></tr><tr><td>大分県</td><td class="num">204</td><td class="num">38,128</td><td class="num">3,393</td><td class="num">30</td><td class="num">29<small>14.2%</small></td><td class="num">9<small>4.4%</small></td><td class="num">17<small>8.3%</small></td><td class="num">37<small>18.1%</small></td></tr><tr><td>宮崎県</td><td class="num">124</td><td class="num">35,940</td><td class="num">3,360</td><td class="num">31</td><td class="num">22<small>17.7%</small></td><td class="num">8<small>6.5%</small></td><td class="num">6<small>4.8%</small></td><td class="num">17<small>13.7%</small></td></tr><tr><td>鹿児島県</td><td class="num">295</td><td class="num">49,105</td><td class="num">3,092</td><td class="num">36</td><td class="num">29<small>9.8%</small></td><td class="num">15<small>5.1%</small></td><td class="num">17<small>5.8%</small></td><td class="num">31<small>10.5%</small></td></tr><tr><td>沖縄県</td><td class="num">251</td><td class="num">36,393</td><td class="num">2,480</td><td class="num">41</td><td class="num">98<small>39.0%</small></td><td class="num">17<small>6.8%</small></td><td class="num">40<small>15.9%</small></td><td class="num">92<small>36.7%</small></td></tr></tbody>
+    </table></div>
+  </section>
+
+  <section id="method">
+    <h2>観測方法</h2>
+    <ul class="method">
+      <li>サウナイキタイの施設検索（sauna-ikitai.com/search）で都道府県を指定し、表示される件数を登録施設数としています。</li>
+      <li>条件別は同じ検索に条件を足した件数です。水着着用＝「水着着用」、プライベートサウナ＝施設タイプ「プライベートサウナ」、アウフグース＝「アウフグース（ロウリュサービス）」、タトゥーOK＝「タトゥーOK」。</li>
+      <li>サ活数は検索結果の全ページを巡回し、各施設に表示されるサ活数を県ごとに合計しています。</li>
+      <li>人口あたり活発度 ＝ サ活数 ÷ 人口 × 10万。人口は令和2年国勢調査で固定しているため、変化はサ活数の伸びだけを反映します。</li>
+      <li>全国平均の構成比 ＝ 全国の条件該当件数 ÷ 全国の登録施設数。</li>
+    </ul>
+  </section>
+</div>
+
+<script>
+(function(){
+  var btn=document.getElementById('copy'), pre=document.getElementById('share-text');
+  btn.addEventListener('click',function(){
+    var t=pre.textContent;
+    function sel(){var r=document.createRange();r.selectNodeContents(pre);var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='選択しました';}
+    try{navigator.clipboard.writeText(t).then(function(){btn.textContent='コピーしました';setTimeout(function(){btn.textContent='コピー'},1800)},sel)}catch(e){sel()}
+  });
+
+  // 推移チャート
+  var H=[{"date": "2026-11-16", "total": 13810, "sakatsu": 9013516}], box=document.getElementById('chart');
+  function draw(){
+    var w=Math.max(280,box.clientWidth-24), h=200, pl=56, pr=16, pt=14, pb=28;
+    var vals=H.map(function(d){return d.total}), mn=Math.min.apply(null,vals), mx=Math.max.apply(null,vals);
+    if(mn===mx){mn=mn-100;mx=mx+100}
+    var pad=(mx-mn)*0.15; mn-=pad; mx+=pad;
+    var x=function(i){return H.length<2?(pl+(w-pl-pr)/2):pl+i*(w-pl-pr)/(H.length-1)};
+    var y=function(v){return pt+(1-(v-mn)/(mx-mn))*(h-pt-pb)};
+    var ns='http://www.w3.org/2000/svg', s='<svg viewBox="0 0 '+w+' '+h+'" role="img" aria-label="全国登録施設数の推移">';
+    for(var k=0;k<=3;k++){var v=mn+(mx-mn)*k/3, yy=y(v);
+      s+='<line x1="'+pl+'" x2="'+(w-pr)+'" y1="'+yy+'" y2="'+yy+'" stroke="var(--line)" stroke-width="1"/>';
+      s+='<text x="'+(pl-8)+'" y="'+(yy+4)+'" text-anchor="end" font-size="11" fill="var(--muted)" font-family="var(--f-num)">'+Math.round(v).toLocaleString()+'</text>';}
+    var pts=H.map(function(d,i){return x(i)+','+y(d.total)}).join(' ');
+    if(H.length>1){
+      s+='<polygon points="'+x(0)+','+(h-pb)+' '+pts+' '+x(H.length-1)+','+(h-pb)+'" fill="var(--cold-soft)"/>';
+      s+='<polyline points="'+pts+'" fill="none" stroke="var(--cold)" stroke-width="2"/>';}
+    H.forEach(function(d,i){var last=i===H.length-1;
+      s+='<circle cx="'+x(i)+'" cy="'+y(d.total)+'" r="'+(last?5:3)+'" fill="'+(last?'var(--heat)':'var(--cold)')+'"><title>'+d.date+'　'+d.total.toLocaleString()+'件</title></circle>';
+      if(last||i===0) s+='<text x="'+x(i)+'" y="'+(h-8)+'" text-anchor="'+(H.length<2?'middle':(last?'end':'start'))+'" font-size="11" fill="var(--muted)" font-family="var(--f-num)">'+d.date.slice(5).replace('-','/')+'</text>';});
+    box.innerHTML=s+'</svg>';
+  }
+  draw(); var t; addEventListener('resize',function(){clearTimeout(t);t=setTimeout(draw,150)});
+
+  // 表の並べ替え
+  var tbl=document.getElementById('pref'), ths=tbl.tHead.rows[0].cells;
+  Array.prototype.forEach.call(ths,function(th,ci){th.tabIndex=0;
+    function sort(){var asc=th.getAttribute('aria-sort')==='descending';
+      Array.prototype.forEach.call(ths,function(o){o.removeAttribute('aria-sort')});
+      th.setAttribute('aria-sort',asc?'ascending':'descending');
+      var rows=Array.prototype.slice.call(tbl.tBodies[0].rows);
+      rows.sort(function(a,b){var A=a.cells[ci].firstChild.textContent.replace(/[,+]/g,''),B=b.cells[ci].firstChild.textContent.replace(/[,+]/g,'');
+        var na=parseFloat(A),nb=parseFloat(B), c=(isNaN(na)||isNaN(nb))?0:(na-nb); if(ci===0)c=0;
+        return asc?c:-c});
+      if(ci===0&&!asc) rows.reverse();
+      rows.forEach(function(r){tbl.tBodies[0].appendChild(r)});}
+    th.addEventListener('click',sort); th.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();sort()}});
+  });
+})();
+</script>

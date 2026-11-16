@@ -1,0 +1,671 @@
+{
+ "date": "2026-11-16",
+ "source": "https://sauna-ikitai.com/search",
+ "conditions": {
+  "swimwear": "水着着用",
+  "private": "プライベートサウナ",
+  "aufguss": "アウフグース",
+  "tattoo": "タトゥーOK"
+ },
+ "national_total": 16656,
+ "prefectures": {
+  "hokkaido": {
+   "name": "北海道",
+   "population": 5224614,
+   "facilities": 978,
+   "conditions": {
+    "swimwear": 98,
+    "private": 39,
+    "aufguss": 87,
+    "tattoo": 211
+   },
+   "sakatsu": 595157,
+   "ikitai": 278051,
+   "listed": 978
+  },
+  "aomori": {
+   "name": "青森県",
+   "population": 1237984,
+   "facilities": 206,
+   "conditions": {
+    "swimwear": 14,
+    "private": 4,
+    "aufguss": 8,
+    "tattoo": 70
+   },
+   "sakatsu": 57797,
+   "ikitai": 20001,
+   "listed": 206
+  },
+  "iwate": {
+   "name": "岩手県",
+   "population": 1210534,
+   "facilities": 159,
+   "conditions": {
+    "swimwear": 11,
+    "private": 3,
+    "aufguss": 16,
+    "tattoo": 26
+   },
+   "sakatsu": 68248,
+   "ikitai": 28236,
+   "listed": 159
+  },
+  "miyagi": {
+   "name": "宮城県",
+   "population": 2301996,
+   "facilities": 202,
+   "conditions": {
+    "swimwear": 28,
+    "private": 13,
+    "aufguss": 20,
+    "tattoo": 52
+   },
+   "sakatsu": 178683,
+   "ikitai": 50263,
+   "listed": 202
+  },
+  "akita": {
+   "name": "秋田県",
+   "population": 959502,
+   "facilities": 166,
+   "conditions": {
+    "swimwear": 23,
+    "private": 8,
+    "aufguss": 8,
+    "tattoo": 34
+   },
+   "sakatsu": 52420,
+   "ikitai": 16553,
+   "listed": 166
+  },
+  "yamagata": {
+   "name": "山形県",
+   "population": 1068027,
+   "facilities": 133,
+   "conditions": {
+    "swimwear": 19,
+    "private": 8,
+    "aufguss": 11,
+    "tattoo": 38
+   },
+   "sakatsu": 58749,
+   "ikitai": 25349,
+   "listed": 133
+  },
+  "fukushima": {
+   "name": "福島県",
+   "population": 1833152,
+   "facilities": 242,
+   "conditions": {
+    "swimwear": 38,
+    "private": 10,
+    "aufguss": 22,
+    "tattoo": 45
+   },
+   "sakatsu": 60789,
+   "ikitai": 33067,
+   "listed": 242
+  },
+  "ibaraki": {
+   "name": "茨城県",
+   "population": 2867009,
+   "facilities": 265,
+   "conditions": {
+    "swimwear": 56,
+    "private": 20,
+    "aufguss": 34,
+    "tattoo": 57
+   },
+   "sakatsu": 101983,
+   "ikitai": 60290,
+   "listed": 265
+  },
+  "tochigi": {
+   "name": "栃木県",
+   "population": 1933146,
+   "facilities": 317,
+   "conditions": {
+    "swimwear": 47,
+    "private": 21,
+    "aufguss": 30,
+    "tattoo": 59
+   },
+   "sakatsu": 94123,
+   "ikitai": 44793,
+   "listed": 317
+  },
+  "gunma": {
+   "name": "群馬県",
+   "population": 1939110,
+   "facilities": 298,
+   "conditions": {
+    "swimwear": 51,
+    "private": 14,
+    "aufguss": 41,
+    "tattoo": 61
+   },
+   "sakatsu": 76684,
+   "ikitai": 51636,
+   "listed": 298
+  },
+  "saitama": {
+   "name": "埼玉県",
+   "population": 7344765,
+   "facilities": 375,
+   "conditions": {
+    "swimwear": 43,
+    "private": 18,
+    "aufguss": 55,
+    "tattoo": 97
+   },
+   "sakatsu": 600308,
+   "ikitai": 220782,
+   "listed": 375
+  },
+  "chiba": {
+   "name": "千葉県",
+   "population": 6284480,
+   "facilities": 651,
+   "conditions": {
+    "swimwear": 155,
+    "private": 31,
+    "aufguss": 102,
+    "tattoo": 220
+   },
+   "sakatsu": 471272,
+   "ikitai": 216328,
+   "listed": 651
+  },
+  "tokyo": {
+   "name": "東京都",
+   "population": 14047594,
+   "facilities": 970,
+   "conditions": {
+    "swimwear": 92,
+    "private": 83,
+    "aufguss": 114,
+    "tattoo": 432
+   },
+   "sakatsu": 2514662,
+   "ikitai": 1612255,
+   "listed": 970
+  },
+  "kanagawa": {
+   "name": "神奈川県",
+   "population": 9237337,
+   "facilities": 622,
+   "conditions": {
+    "swimwear": 74,
+    "private": 32,
+    "aufguss": 73,
+    "tattoo": 204
+   },
+   "sakatsu": 803124,
+   "ikitai": 376959,
+   "listed": 622
+  },
+  "niigata": {
+   "name": "新潟県",
+   "population": 2201272,
+   "facilities": 277,
+   "conditions": {
+    "swimwear": 41,
+    "private": 5,
+    "aufguss": 23,
+    "tattoo": 60
+   },
+   "sakatsu": 94961,
+   "ikitai": 47655,
+   "listed": 277
+  },
+  "toyama": {
+   "name": "富山県",
+   "population": 1034814,
+   "facilities": 158,
+   "conditions": {
+    "swimwear": 16,
+    "private": 6,
+    "aufguss": 20,
+    "tattoo": 33
+   },
+   "sakatsu": 109466,
+   "ikitai": 51399,
+   "listed": 158
+  },
+  "ishikawa": {
+   "name": "石川県",
+   "population": 1132526,
+   "facilities": 220,
+   "conditions": {
+    "swimwear": 18,
+    "private": 3,
+    "aufguss": 22,
+    "tattoo": 45
+   },
+   "sakatsu": 90712,
+   "ikitai": 31557,
+   "listed": 220
+  },
+  "fukui": {
+   "name": "福井県",
+   "population": 766863,
+   "facilities": 117,
+   "conditions": {
+    "swimwear": 13,
+    "private": 5,
+    "aufguss": 10,
+    "tattoo": 21
+   },
+   "sakatsu": 24695,
+   "ikitai": 9068,
+   "listed": 117
+  },
+  "yamanashi": {
+   "name": "山梨県",
+   "population": 809974,
+   "facilities": 397,
+   "conditions": {
+    "swimwear": 102,
+    "private": 19,
+    "aufguss": 45,
+    "tattoo": 108
+   },
+   "sakatsu": 91791,
+   "ikitai": 71890,
+   "listed": 397
+  },
+  "nagano": {
+   "name": "長野県",
+   "population": 2048011,
+   "facilities": 590,
+   "conditions": {
+    "swimwear": 126,
+    "private": 28,
+    "aufguss": 72,
+    "tattoo": 163
+   },
+   "sakatsu": 129032,
+   "ikitai": 117912,
+   "listed": 590
+  },
+  "gifu": {
+   "name": "岐阜県",
+   "population": 1978742,
+   "facilities": 286,
+   "conditions": {
+    "swimwear": 62,
+    "private": 15,
+    "aufguss": 30,
+    "tattoo": 61
+   },
+   "sakatsu": 165374,
+   "ikitai": 71369,
+   "listed": 286
+  },
+  "shizuoka": {
+   "name": "静岡県",
+   "population": 3633202,
+   "facilities": 663,
+   "conditions": {
+    "swimwear": 118,
+    "private": 26,
+    "aufguss": 70,
+    "tattoo": 159
+   },
+   "sakatsu": 280272,
+   "ikitai": 144634,
+   "listed": 663
+  },
+  "aichi": {
+   "name": "愛知県",
+   "population": 7542415,
+   "facilities": 465,
+   "conditions": {
+    "swimwear": 27,
+    "private": 16,
+    "aufguss": 52,
+    "tattoo": 119
+   },
+   "sakatsu": 492776,
+   "ikitai": 220972,
+   "listed": 465
+  },
+  "mie": {
+   "name": "三重県",
+   "population": 1770254,
+   "facilities": 213,
+   "conditions": {
+    "swimwear": 38,
+    "private": 10,
+    "aufguss": 24,
+    "tattoo": 45
+   },
+   "sakatsu": 65329,
+   "ikitai": 29748,
+   "listed": 213
+  },
+  "shiga": {
+   "name": "滋賀県",
+   "population": 1413610,
+   "facilities": 191,
+   "conditions": {
+    "swimwear": 46,
+    "private": 12,
+    "aufguss": 22,
+    "tattoo": 49
+   },
+   "sakatsu": 51465,
+   "ikitai": 30927,
+   "listed": 191
+  },
+  "kyoto": {
+   "name": "京都府",
+   "population": 2578087,
+   "facilities": 347,
+   "conditions": {
+    "swimwear": 45,
+    "private": 14,
+    "aufguss": 32,
+    "tattoo": 133
+   },
+   "sakatsu": 145142,
+   "ikitai": 112208,
+   "listed": 347
+  },
+  "osaka": {
+   "name": "大阪府",
+   "population": 8837685,
+   "facilities": 656,
+   "conditions": {
+    "swimwear": 59,
+    "private": 40,
+    "aufguss": 63,
+    "tattoo": 238
+   },
+   "sakatsu": 479512,
+   "ikitai": 260343,
+   "listed": 656
+  },
+  "hyogo": {
+   "name": "兵庫県",
+   "population": 5465002,
+   "facilities": 510,
+   "conditions": {
+    "swimwear": 87,
+    "private": 27,
+    "aufguss": 44,
+    "tattoo": 125
+   },
+   "sakatsu": 181830,
+   "ikitai": 98466,
+   "listed": 510
+  },
+  "nara": {
+   "name": "奈良県",
+   "population": 1324473,
+   "facilities": 96,
+   "conditions": {
+    "swimwear": 13,
+    "private": 2,
+    "aufguss": 8,
+    "tattoo": 21
+   },
+   "sakatsu": 30773,
+   "ikitai": 18440,
+   "listed": 96
+  },
+  "wakayama": {
+   "name": "和歌山県",
+   "population": 922584,
+   "facilities": 132,
+   "conditions": {
+    "swimwear": 36,
+    "private": 8,
+    "aufguss": 21,
+    "tattoo": 37
+   },
+   "sakatsu": 23425,
+   "ikitai": 14898,
+   "listed": 132
+  },
+  "tottori": {
+   "name": "鳥取県",
+   "population": 553407,
+   "facilities": 70,
+   "conditions": {
+    "swimwear": 11,
+    "private": 1,
+    "aufguss": 7,
+    "tattoo": 12
+   },
+   "sakatsu": 16919,
+   "ikitai": 8763,
+   "listed": 70
+  },
+  "shimane": {
+   "name": "島根県",
+   "population": 671126,
+   "facilities": 106,
+   "conditions": {
+    "swimwear": 19,
+    "private": 4,
+    "aufguss": 10,
+    "tattoo": 13
+   },
+   "sakatsu": 13451,
+   "ikitai": 11572,
+   "listed": 106
+  },
+  "okayama": {
+   "name": "岡山県",
+   "population": 1888432,
+   "facilities": 148,
+   "conditions": {
+    "swimwear": 22,
+    "private": 9,
+    "aufguss": 12,
+    "tattoo": 23
+   },
+   "sakatsu": 29205,
+   "ikitai": 17947,
+   "listed": 148
+  },
+  "hiroshima": {
+   "name": "広島県",
+   "population": 2799702,
+   "facilities": 225,
+   "conditions": {
+    "swimwear": 32,
+    "private": 10,
+    "aufguss": 28,
+    "tattoo": 44
+   },
+   "sakatsu": 80579,
+   "ikitai": 36526,
+   "listed": 225
+  },
+  "yamaguchi": {
+   "name": "山口県",
+   "population": 1342059,
+   "facilities": 170,
+   "conditions": {
+    "swimwear": 16,
+    "private": 7,
+    "aufguss": 8,
+    "tattoo": 27
+   },
+   "sakatsu": 20597,
+   "ikitai": 12302,
+   "listed": 170
+  },
+  "tokushima": {
+   "name": "徳島県",
+   "population": 719559,
+   "facilities": 94,
+   "conditions": {
+    "swimwear": 8,
+    "private": 4,
+    "aufguss": 8,
+    "tattoo": 16
+   },
+   "sakatsu": 13970,
+   "ikitai": 8541,
+   "listed": 94
+  },
+  "kagawa": {
+   "name": "香川県",
+   "population": 950244,
+   "facilities": 140,
+   "conditions": {
+    "swimwear": 20,
+    "private": 2,
+    "aufguss": 14,
+    "tattoo": 26
+   },
+   "sakatsu": 38216,
+   "ikitai": 22693,
+   "listed": 140
+  },
+  "ehime": {
+   "name": "愛媛県",
+   "population": 1334841,
+   "facilities": 153,
+   "conditions": {
+    "swimwear": 13,
+    "private": 3,
+    "aufguss": 12,
+    "tattoo": 22
+   },
+   "sakatsu": 41701,
+   "ikitai": 18058,
+   "listed": 153
+  },
+  "kochi": {
+   "name": "高知県",
+   "population": 691527,
+   "facilities": 93,
+   "conditions": {
+    "swimwear": 14,
+    "private": 2,
+    "aufguss": 8,
+    "tattoo": 23
+   },
+   "sakatsu": 17716,
+   "ikitai": 11785,
+   "listed": 93
+  },
+  "fukuoka": {
+   "name": "福岡県",
+   "population": 5135214,
+   "facilities": 324,
+   "conditions": {
+    "swimwear": 45,
+    "private": 29,
+    "aufguss": 43,
+    "tattoo": 74
+   },
+   "sakatsu": 232364,
+   "ikitai": 111610,
+   "listed": 324
+  },
+  "saga": {
+   "name": "佐賀県",
+   "population": 811442,
+   "facilities": 106,
+   "conditions": {
+    "swimwear": 15,
+    "private": 8,
+    "aufguss": 8,
+    "tattoo": 25
+   },
+   "sakatsu": 47367,
+   "ikitai": 51355,
+   "listed": 106
+  },
+  "nagasaki": {
+   "name": "長崎県",
+   "population": 1312317,
+   "facilities": 145,
+   "conditions": {
+    "swimwear": 22,
+    "private": 6,
+    "aufguss": 10,
+    "tattoo": 29
+   },
+   "sakatsu": 27612,
+   "ikitai": 20058,
+   "listed": 145
+  },
+  "kumamoto": {
+   "name": "熊本県",
+   "population": 1738301,
+   "facilities": 260,
+   "conditions": {
+    "swimwear": 28,
+    "private": 25,
+    "aufguss": 23,
+    "tattoo": 45
+   },
+   "sakatsu": 83699,
+   "ikitai": 54765,
+   "listed": 260
+  },
+  "oita": {
+   "name": "大分県",
+   "population": 1123852,
+   "facilities": 204,
+   "conditions": {
+    "swimwear": 29,
+    "private": 9,
+    "aufguss": 17,
+    "tattoo": 37
+   },
+   "sakatsu": 38128,
+   "ikitai": 37252,
+   "listed": 204
+  },
+  "miyazaki": {
+   "name": "宮崎県",
+   "population": 1069576,
+   "facilities": 124,
+   "conditions": {
+    "swimwear": 22,
+    "private": 8,
+    "aufguss": 6,
+    "tattoo": 17
+   },
+   "sakatsu": 35940,
+   "ikitai": 13733,
+   "listed": 124
+  },
+  "kagoshima": {
+   "name": "鹿児島県",
+   "population": 1588256,
+   "facilities": 295,
+   "conditions": {
+    "swimwear": 29,
+    "private": 15,
+    "aufguss": 17,
+    "tattoo": 31
+   },
+   "sakatsu": 49105,
+   "ikitai": 24908,
+   "listed": 295
+  },
+  "okinawa": {
+   "name": "沖縄県",
+   "population": 1467480,
+   "facilities": 251,
+   "conditions": {
+    "swimwear": 98,
+    "private": 17,
+    "aufguss": 40,
+    "tattoo": 92
+   },
+   "sakatsu": 36393,
+   "ikitai": 32473,
+   "listed": 251
+  }
+ }
+}
